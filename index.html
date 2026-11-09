@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <p class="subtitle">Complete the form step by step</p>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="stepText">Step 1 of 3</p>
+        </div>
+        <form id="registrationForm">
+            <div class="form-step active">
+                <h2>Personal Information</h2>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-step">
+                <h2>Additional Details</h2>
+                <label for="course">Select Your Course</label>
+                <select id="course" required>
+                    <option value="">Choose a course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Python Programming">Python Programming</option>
+                    <option value="Data Science">Data Science</option>
+                </select>
+                <label for="education">Education</label>
+                <select id="education" required>
+                    <option value="">Select your education</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Bachelor's">Bachelor's</option>
+                    <option value="Master's">Master's</option>
+                </select>
+                <label for="experience">Previous Experience</label>
+                <textarea id="experience" placeholder="Tell us about your experience" required></textarea>
+            </div>
+            <div class="form-step">
+                <h2>Review Your Information</h2>
+                <div class="summary" id="summary">
+                </div>
+            </div>
+            <p class="error-message" id="errorMessage"></p>
+            <div class="buttons">
+                <button type="button" id="prevButton">Previous</button>
+                <button type="button" id="nextButton">Next</button>
+                <button type="submit" id="submitButton">Submit</button>
+            </div>
+        </form>
+        <p class="success-message" id="successMessage"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
